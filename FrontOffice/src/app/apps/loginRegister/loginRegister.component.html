@@ -1,0 +1,96 @@
+<div
+  class="banner-innerpage"
+  style="background-image: url(assets/images/landingpage/banner-bg2.jpg)"
+>
+  <div class="container">
+    <!-- Row  -->
+    <div class="row justify-content-center">
+      <!-- Column -->
+      <div class="col-lg-9 col-md-6 no-trans align-self-center text-center">
+        <h1 class="title">Page d'inscription et connexion</h1>
+      </div>
+      <!-- Column -->
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow my-5">
+        <h4 class="card-header">inscription</h4>
+        <div class="card-body">
+          <form [formGroup]="personneForm" (ngSubmit)="createAccount()">
+            <div class="form-group">
+              <label for="nom">Nom: </label>
+              <input type="text" id="nom" formControlName="nom" class="form-control border">
+              <small class="form-text text-danger feedback"></small>
+            </div>
+            <div class="form-group">
+              <label for="prenom">Prénom: </label>
+              <input type="text" id="prenom" formControlName="prenom" class="form-control border">
+              <small class="form-text text-danger feedback"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email" formControlName="email" class="form-control border">
+              <small class="form-text text-danger feedback"></small>
+            </div>
+            <div class="form-group">
+              <label for="email">Description</label>
+              <textarea class="form-control border" formControlName="description" id="description" cols="30" rows="10"></textarea>
+              <small class="form-text text-danger feedback"></small>
+            </div>
+            <div class="form-group">
+              <label for="password">Teléphone</label>
+              <input type="number" id="telephone" formControlName="telephone" class="form-control border" autocomplete="off">
+              <small class="form-text text-danger feedback"></small>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" formControlName="password" class="form-control border" autocomplete="off">
+              <small class="form-text text-danger feedback"></small>
+            </div>
+            <div class="form-group">
+              <label for="confirmPassword">Confirm password</label>
+              <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control border" autocomplete="off">
+              <small class="form-text text-danger feedback"></small>
+            </div>
+            <div class="custom-control custom-switch mb-3">
+              <input type="checkbox" class="custom-control-input" id="showPassword">
+              <label class="custom-control-label" for="showPassword">Show password</label>
+            </div>
+            <button type="button" class="btn btn-inverse btn-outline-dark" (click)="createAccount()" [disabled]="!personneForm.valid">Register</button>
+          </form>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card shadow my-5">
+        <h4 class="card-header">Connexion</h4>
+        <div class="card-body">
+          <form [formGroup]="loginForm" >
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input type="email" id="email1" formControlName="email1" class="form-control border">
+              <small class="form-text text-danger feedback"></small>
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password1" formControlName="password1" class="form-control border" autocomplete="off">
+              <small class="form-text text-danger feedback"></small>
+            </div>
+            <div class="custom-control custom-switch mb-3">
+              <input type="checkbox" class="custom-control-input" id="showPassword">
+              <label class="custom-control-label" for="showPassword">Show password</label>
+            </div>
+            <button type="submit" class="btn btn-outline-dark" (click)="loginPersonne()">Login</button>
+          </form>
+        </div>
+        <div class="card-footer"></div>
+      </div>
+    </div> 
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<ng-container  *ngIf="commentaires && commentaires.length > 0">
+    <div class="cardbox-comments" *ngFor="let comment of commentaires">
+        <span class="comment-avatar float-left">
+            <a href=""><img class="rounded-circle"
+            src="http://www.themashabrand.com/templates/bootsnipp/post/assets/img/users/6.jpg" alt="..."></a>
+        </span>
+        <div class="search">
+            <input type="text" value="{{comment.personne?.nom}} {{comment.personne?.prenom}}:  {{comment.description}}, le {{comment.commentairePK.date}} " disabled>
+        </div>
+        <!--/. Search -->
+    </div>
+</ng-container>

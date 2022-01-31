@@ -1,0 +1,25 @@
+<div class="collapse navbar-collapse hover-dropdown font-14 ml-auto" id="h6-info">
+    <ul class="navbar-nav ml-auto  align-items-center">
+
+
+        <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link" routerLink="/">
+                Home
+            </a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="nav-link" routerLink="/about">
+                About
+            </a>
+        </li>
+        <li class="nav-item" [routerLinkActive]="['active']">
+            <a class="btn btn-danger-gradiant font-14" routerLink="/login-regsiter" *ngIf="!userId">
+                Rejoignez-nous
+            </a>
+            <a class="btn btn-danger-gradiant font-14" (click)="logout()" *ngIf="userId">
+                Déconnexion
+            </a>
+        </li>
+    </ul>
+
+</div>
